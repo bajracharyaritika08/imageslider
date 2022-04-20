@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Anek+Odia:wght@200&display=swap');
+
+/* font-family: 'Anek Odia', sans-serif; */
+
+@import url('https://fonts.googleapis.com/css2?family=Anek+Odia:wght@200&family=Square+Peg&display=swap');
+
+/* font-family: 'Square Peg', cursive; */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 100vh;
+    overflow: hidden;
+    margin: 0;
+}
+
+.imagest {
+    background-image: url("../images/kumariimg1.jpg");
+}
+
+.imagend {
+    background-image: url("../images/kumariimg2.jpg");
+}
+
+.imagerd {
+    background-image: url("../images/kumaridethroned.jpg");
+}
+
+.imageth {
+    background-image: url("../images/kumariimg4.jpg");
+}
+
+h1 {
+    font-family: 'Anek Odia', sans-serif;
+}
+
+ul li,
+p {
+    font-family: 'Square Peg', cursive;
+    font-size: x-large;
+}
+
+.slider-container {
+    position: relative;
+    overflow: hidden;
+    width: 100vw;
+    height: 100vh;
+}
+
+.left-slide {
+    height: 100%;
+    width: 35%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: transform .5s ease-in-out;
+}
+
+.left-slide>div {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.left-slide h1 {
+    margin-bottom: 10px;
+    margin-top: -30px;
+}
+
+.right-slide {
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 35%;
+    width: 65%;
+    transition: transform .5s ease-in-out;
+}
+
+.right-slide>div {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    height: 100%;
+    width: 100%;
+}
+
+button {
+    background-color: rgb(126, 126, 126);
+    border: none;
+    color: rgb(11, 0, 57);
+    cursor: pointer;
+    font-size: 16px;
+    padding: 12px;
+}
+
+button :hover {
+    color: rgb(37, 23, 95);
+}
+
+button:focus {
+    outline: none;
+}
+
+.slider-container .action-buttons button {
+    position: absolute;
+    left: 35%;
+    top: 50%;
+    z-index: 100;
+}
+
+.down-button {
+    transform: translateX(-100%);
+    position: absolute;
+    left: 35%;
+    top: 50%;
+    z-index: 100;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+.up-button {
+    transform: translateY(-100%);
+    position: absolute;
+    left: 35%;
+    top: 50%;
+    z-index: 100;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
